@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 from aws_cdk import App, Environment
-from cdk.cdk_stack import {stack-name}
+from cdk.cdk_stack import AwsCdkStack
 
 app = App()
 
 # dev
-{stack_name}(
+AwsCdkStack(
     app,
     "dev-{repo-name}",
     environment="dev",
@@ -16,7 +16,7 @@ app = App()
 )
 
 # stg
-{stack_name}(
+AwsCdkStack(
     app,
     "stg-{repo-name}",
     environment="stg",
@@ -27,7 +27,7 @@ app = App()
 )
 
 # prod
-{stack_name}(
+AwsCdkStack(
     app,
     "prd-{repo-name}",
     environment="prd",
